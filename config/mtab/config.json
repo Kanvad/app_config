@@ -6,7 +6,7 @@
     "name": "rain"
   },
   "title": {
-    "defaultTitle": "mtab",
+    "defaultTitle": "rain",
     "dynamic": {
       "enabled": true
     },
@@ -109,7 +109,7 @@
       {
         "type": "bookmark",
         "name": "discord",
-        "url": "https://discord.com",
+        "url": "https://discord.com/channels/",
         "color": "#6366f1",
         "iconType": "ri-discord-fill",
         "iconColor": "#ffffff",
