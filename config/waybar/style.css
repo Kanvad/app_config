@@ -1,52 +1,14 @@
-/* @import "mocha.css"; */
+@import "mocha.css";
 
 /* Keyframes */
 
 @keyframes blink-critical {
 	to {
 		/*color: @white;*/
-		background-color: @critical;
+		background-color: @red;
 	}
 }
 
-
-/* Styles */
-
-/* Colors (gruvbox) */
-@define-color black	#282828;
-@define-color red	#cc241d;
-@define-color green	#98971a;
-@define-color yellow	#d79921;
-@define-color blue	#458588;
-@define-color purple	#b16286;
-@define-color aqua	#689d6a;
-@define-color gray	#a89984;
-@define-color brgray	#928374;
-@define-color brred	#fb4934;
-@define-color brgreen	#b8bb26;
-@define-color bryellow	#fabd2f;
-@define-color brblue	#83a598;
-@define-color brpurple	#d3869b;
-@define-color braqua	#8ec07c;
-@define-color white	#ebdbb2;
-@define-color bg2	#504945;
-
-
-@define-color warning 	@bryellow;
-@define-color critical	@red;
-@define-color mode	@black;
-@define-color unfocused	@bg2;
-@define-color focused	@braqua;
-@define-color inactive	@purple;
-@define-color sound	@brpurple;
-@define-color network	@purple;
-@define-color memory	@braqua;
-@define-color cpu	@green;
-@define-color temp	@brgreen;
-@define-color layout	@bryellow;
-@define-color battery	@aqua;
-@define-color date	@black;
-@define-color time	@white;
 
 /* Reset all styles */
 * {
@@ -62,24 +24,20 @@
 
 /* The whole bar */
 #waybar {
-	background: rgba(40, 40, 40, 0.507); /* #282828e0 */
+	background: rgba(66, 65, 65, 0); /* #282828e0 */
 	color: @white;
-	font-family: JetBrains Mono, Siji;
-	font-size: 10pt;
-	/*font-weight: bold;*/
+	font-family: "JetBrains Mono Nerd Font", "Siji", "Font Awesome 6 Free";
+	font-size: 11pt;
+	font-weight: bold;
 }
 
 /* Each module */
 #battery,
 #power-profiles-daemon,
 #clock,
-#cpu,
 #language,
-#memory,
 #mode,
-#network,
 #wireplumber,
-#temperature,
 #tray,
 #backlight,
 #idle_inhibitor,
@@ -94,9 +52,6 @@
 /* Each critical module */
 #mode,
 /* #power-profiles-daemon, */
-#memory.critical,
-#cpu.critical,
-#temperature.critical,
 #battery.critical.discharging {
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
@@ -106,54 +61,45 @@
 }
 
 /* Each warning */
-#network.disconnected,
-#memory.warning,
-#cpu.warning,
-#temperature.warning,
 #battery.warning.discharging {
-	color: @warning;
+	color: @red;
 }
 
 /* And now modules themselves in their respective order */
 
 /* Current sway mode (resize etc) */
 #mode {
-	color: @white;
-	background: @mode;
+	color: @text;
+	background: @base;
 }
 
 /* Workspaces stuff */
+#workspaces {
+	border-radius: 1rem;
+	/* margin: 5px; */
+	margin-left: 1rem;
+	background: @surface0;
+}
+
 #workspaces button {
 	/*font-weight: bold;*/
-	padding-left: 2pt;
-	padding-right: 2pt;
-	color: @white;
-	background: @unfocused;
+	color: @peach;
+	background: @surface0;
+	border-radius: 1rem;
+	/* margin: 0 2px 0 2px; */
+	padding: 0 8px 0 5px;
 }
 
-/* Inactive (on unfocused output) */
-#workspaces button.visible {
-	color: @white;
-	/* background: @inactive; */
-	background: @cpu;
-}
-
-/* Active (on focused output) */
-#workspaces button.focused {
-	color: @black;
-	background: @focused;
-}
-
-/* Contains an urgent window */
-#workspaces button.urgent {
-	color: @black;
-	background: @warning;
+#workspaces button.active {
+	color: @teal;
+	background: @surface2;
+	border-radius: 1rem;
 }
 
 /* Style when cursor is on the button */
 #workspaces button:hover {
-	background: @black;
-	color: @white;
+	background: @crust;
+	color: @pink;
 }
 
 #window {
@@ -162,112 +108,70 @@
 }
 
 #wireplumber {
-	background: @sound;
-	color: @black;
-	font-family: "Font Awesome 6 Free";
-	font-size: 9pt;
+	background: @teal;
+	color: @base;
+	/* font-family: "Font Awesome 6 Free"; */
+	font-size: 10pt;
 }
 
-#network {
-	background: @network;
-	color: @white;
-}
-
-#memory {
-	background: @memory;
-	color: @black;
-}
-
-#cpu {
-	background: @cpu;
-	color: @white;
-}
-
-#temperature, #power-profiles-daemon {
-	background: @temp;
-	color: @black;
+#power-profiles-daemon {
+	background: @peach;
+	color: @crust;
+	font-size: 11pt;
 }
 
 #language, #tray {
-	background: @layout;
-	color: @black;
+	background: @text;
+	color: @base;
 }
 
 #battery {
-	background: @battery;
-	color: @white;
+	background: @mauve;
+	color: @base;
 }
 
-/* #tray {
-	background: @date;
-} */
-
 #clock.date {
-	background: @date;
-	color: @white;
+	background: @crust;
+	color: @teal;
 }
 
 #clock.time {
-	background: @time;
-	color: @black;
+	background: @surface0;
+	color: @yellow;
 }
 
 #custom-arrow1 {
 	font-size: 11pt;
-	color: @time;
-	background: @date;
+	color: @surface0;
+	background: @crust;
 }
 
 #custom-arrow2 {
 	font-size: 11pt;
-	color: @date;
-	background: @layout;
+	color: @crust;
+	background: @text;
 }
 
 #custom-arrow3 {
 	font-size: 11pt;
-	color: @layout;
-	background: @battery;
+	color: @text;
+	background: @mauve;
 }
 
 #custom-arrow4 {
 	font-size: 11pt;
-	color: @battery;
-	background: @temp;
+	color: @mauve;
+	background: @peach;
 }
 
 #custom-arrow5 {
 	font-size: 11pt;
-	color: @temp;
-	background: @cpu;
+	color: @peach;
+	background: @teal;
 }
 
 #custom-arrow6 {
 	font-size: 11pt;
-	color: @cpu;
-	background: @memory;
-}
-
-#custom-arrow7 {
-	font-size: 11pt;
-	color: @memory;
-	background: @network;
-}
-
-#custom-arrow8 {
-	font-size: 11pt;
-	color: @network;
-	background: @sound;
-}
-
-#custom-arrow9 {
-	font-size: 11pt;
-	color: @sound;
-	background: transparent;
-}
-
-#custom-arrow10 {
-	font-size: 11pt;
-	color: @unfocused;
+	color: @teal;
 	background: transparent;
 }
