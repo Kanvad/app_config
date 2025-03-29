@@ -24,7 +24,7 @@
 
 /* The whole bar */
 #waybar {
-	background: rgba(66, 65, 65, 0); /* #282828e0 */
+	background: transparent; /* #282828e0 */
 	color: @white;
 	font-family: "JetBrains Mono Nerd Font", "Siji", "Font Awesome 6 Free";
 	font-size: 11pt;
@@ -100,6 +100,10 @@
 #workspaces button:hover {
 	background: @crust;
 	color: @pink;
+}
+
+#workspaces button.urgent {
+	background: @surface2;
 }
 
 #window {

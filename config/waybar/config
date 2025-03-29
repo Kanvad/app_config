@@ -3,7 +3,7 @@
 	"position": "top",
 
 	"modules-left": [
-		"hyprland/submap",
+		// "hyprland/submap",
 		"hyprland/workspaces"
 	],
 
@@ -89,10 +89,13 @@
 	"hyprland/workspaces": {
 		"disable-scroll": true,
         "sort-by-name": true,
+		"persistent-workspaces": {
+			"*": 3
+		},
         "format": "{icon}",
         "format-icons": {
-            "default": "",
-        },
+    		"default": "",
+    	},
 	},
 
 	"wireplumber": {
