@@ -1,7 +1,10 @@
 ## My custom hyprland
 
 ### Preview
+waybar
 ![image1](./asset/preview/img1.png)
+hyprpanel
+![image2](./asset/preview/img2.png)
 <!-- ### Dependencies -->
 <details>
     <summary>Package</summary>
@@ -13,6 +16,7 @@
         <li><a href="https://github.com/mortie/swaylock-effects">swaylock-effects</a></li>
         <li><a href="https://github.com/Mange/rofi-emoji">rofi-emoji</a></li>
         <li><a href="https://github.com/ryanoasis/nerd-fonts">neft-font</a></li>
+        <li><a href="https://hyprpanel.com/">hyprpanel</a></li>
         <li>...</li>
     </ul>
 </details>

@@ -1,0 +1,104 @@
+{
+  "theme.font.size": "0.9rem",
+  "bar.customModules.microphone.label": true,
+  "menus.dashboard.shortcuts.enabled": true,
+  "menus.clock.weather.location": "HoChiMinh",
+  "theme.font.weight": 500,
+  "scalingPriority": "both",
+  "theme.bar.floating": false,
+  "bar.bluetooth.label": false,
+  "theme.bar.buttons.systray.enableBorder": false,
+  "menus.transition": "crossfade",
+  "wallpaper.pywal": true,
+  "wallpaper.image": "",
+  "theme.bar.transparent": true,
+  "theme.bar.buttons.monochrome": false,
+  "wallpaper.enable": false,
+  "theme.bar.menus.monochrome": false,
+  "bar.launcher.autoDetectIcon": false,
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "bar.network.label": false,
+  "bar.battery.hideLabelWhenFull": false,
+  "bar.battery.label": false,
+  "bar.clock.showTime": true,
+  "bar.clock.showIcon": true,
+  "theme.bar.buttons.media.enableBorder": false,
+  "bar.media.truncation_size": 50,
+  "bar.media.show_label": true,
+  "terminal": "kitty",
+  "theme.bar.scaling": 95,
+  "theme.bar.menus.shadowMargins": "5px 5px",
+  "theme.bar.buttons.style": "default",
+  "bar.autoHide": "never",
+  "theme.bar.location": "top",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "theme.bar.layer": "top",
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.showWsIcons": true,
+  "bar.workspaces.showApplicationIcons": true,
+  "menus.clock.time.military": true,
+  "menus.dashboard.directories.enabled": false,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "google-chrome-stable",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Google Chrome",
+  "menus.dashboard.shortcuts.left.shortcut3.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "code",
+  "menus.dashboard.shortcuts.left.shortcut3.tooltip": "VScode",
+  "menus.dashboard.stats.enabled": false,
+  "menus.dashboard.powermenu.avatar.image": "/home/rain/Pictures/user/arch1.png",
+  "menus.clock.time.hideSeconds": false,
+  "menus.media.displayTimeTooltip": false,
+  "bar.clock.format": "%a %b %d / %I:%M %p",
+  "menus.media.displayTime": false
+}
