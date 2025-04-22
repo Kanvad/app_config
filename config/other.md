@@ -1,6 +1,6 @@
 ## Other config
 
-### install packages
+### install packages (Arch Linux)
 ```zsh
 chmod +x install_packages.sh
 ./install_packages.sh

@@ -1,4 +1,4 @@
-## My custom hyprland
+## My configuration for hyprland
 
 ### Preview
 waybar
