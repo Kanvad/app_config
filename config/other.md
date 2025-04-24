@@ -24,14 +24,17 @@ plugins=(
 )
 ```
 
-### hyprpanel
-[All dependencies](https://hyprpanel.com/getting_started/installation.html#arch-1)<br>
-pacman
+### hyprpanel [link](https://hyprpanel.com/getting_started/installation.html#arch-1)
 ```zsh
 sudo pacman -S --needed wireplumber libgtop bluez bluez-utils btop networkmanager dart-sass wl-clipboard brightnessctl swww python upower pacman-contrib power-profiles-daemon gvfs wf-recorder
 ```
-AUR
+---
 ```zsh
 yay -S --needed aylurs-gtk-shell-git grimblast-git hyprpicker matugen-bin python-gpustat hyprsunset-git
 ```
 
+### yazi [link](https://yazi-rs.github.io/docs/installation/#arch)
+```zsh
+sudo pacman -S yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick
+yay -S resvg
+```

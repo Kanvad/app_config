@@ -19,7 +19,6 @@ official_packages=(
     "pipewire-alsa"
     "pipewire-jack"
     "nerd-fonts"
-    "dolphin"
     "firefox"
     "swww"
     "swaync"
@@ -28,6 +27,10 @@ official_packages=(
     "noto-fonts-emoji"
     "hyprpaper"
     "spotify-launcher"
+    "thunar"
+    "thunar-volman"
+    "tumbler"
+
 )
 
 aur_packages=(
@@ -44,6 +47,7 @@ aur_packages=(
     "zen-browser-bin"
     "ttf-ms-fonts"
     "vlc-git"
+    "catppuccin-cursors-mocha"
 )
 
 # Update pacman
