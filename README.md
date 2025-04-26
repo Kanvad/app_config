@@ -5,6 +5,12 @@ waybar
 ![image1](./asset/preview/img1.png)
 hyprpanel
 ![image2](./asset/preview/img2.png)
+
+### Copy config
+```zsh
+chmod +x copy_config.sh && ./copy_config.sh
+```
+
 <!-- ### Dependencies -->
 <details>
     <summary>Package</summary>
