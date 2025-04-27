@@ -4,14 +4,13 @@
 official_packages=(
     "neovim"
     "zsh"
-    "wofi"
     "htop"
     "curl"
     "wget"
     "python"
     "kitty"
     "neofetch"
-    "rofi"
+    "rofi-wayland"
     "fastfetch"
     "fcitx5"
     "fcitx5-configtool"
@@ -20,7 +19,6 @@ official_packages=(
     "pipewire-alsa"
     "pipewire-jack"
     "nerd-fonts"
-    "dolphin"
     "firefox"
     "swww"
     "swaync"
@@ -29,6 +27,10 @@ official_packages=(
     "noto-fonts-emoji"
     "hyprpaper"
     "spotify-launcher"
+    "thunar"
+    "thunar-volman"
+    "tumbler"
+
 )
 
 aur_packages=(
@@ -41,16 +43,18 @@ aur_packages=(
     "hyprsunset"
     "wlogout"
     "hyprlock"
+    "wl-gammarelay"
     "ttf-meslo-nerd-font-powerlevel10k"
     "zen-browser-bin"
     "ttf-ms-fonts"
     "vlc-git"
+    "catppuccin-cursors-mocha"
 )
 
 # Update pacman
 sudo pacman -Syu
 
 # Install packages
-sudo pacman -S --noconfirm --needed "${official_packages[@]}"
+sudo pacman -S --needed "${official_packages[@]}"
 
-yay -S --noconfirm --needed "${aur_packages[@]}"
+yay -S --needed "${aur_packages[@]}"
