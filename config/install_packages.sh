@@ -43,6 +43,7 @@ aur_packages=(
     "hyprsunset"
     "wlogout"
     "hyprlock"
+    "wl-gammarelay"
     "ttf-meslo-nerd-font-powerlevel10k"
     "zen-browser-bin"
     "ttf-ms-fonts"
@@ -54,6 +55,6 @@ aur_packages=(
 sudo pacman -Syu
 
 # Install packages
-sudo pacman -S --noconfirm --needed "${official_packages[@]}"
+sudo pacman -S --needed "${official_packages[@]}"
 
-yay -S --noconfirm --needed "${aur_packages[@]}"
+yay -S --needed "${aur_packages[@]}"
