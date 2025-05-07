@@ -26,6 +26,9 @@ plugins=(
 
 ### hyprpanel [link](https://hyprpanel.com/getting_started/installation.html#arch-1)
 ```zsh
+yay -S ags-hyprpanel-git
+```
+```zsh
 sudo pacman -S --needed wireplumber libgtop bluez bluez-utils btop networkmanager dart-sass wl-clipboard brightnessctl swww python upower pacman-contrib power-profiles-daemon gvfs wf-recorder
 ```
 ---

@@ -30,25 +30,25 @@ official_packages=(
     "thunar"
     "thunar-volman"
     "tumbler"
-
+    "nwg-look"
+    "hyprland"
+    "hyprcursor"
+    "hyprsunset"
+    "hyprlock"
 )
 
 aur_packages=(
     "google-chrome"
     "visual-studio-code-bin"
-    "hyprland-git"
-    "ags-hyprpanel-git"
-    "hyprcursor-git"
     "hyprshot"
-    "hyprsunset"
     "wlogout"
-    "hyprlock"
     "wl-gammarelay"
     "ttf-meslo-nerd-font-powerlevel10k"
     "zen-browser-bin"
     "ttf-ms-fonts"
     "vlc-git"
     "catppuccin-cursors-mocha"
+    "catppuccin-gtk-theme-mocha"
 )
 
 # Update pacman
