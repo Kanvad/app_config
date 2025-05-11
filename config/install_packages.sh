@@ -6,6 +6,8 @@ official_packages=(
     "zsh"
     "htop"
     "curl"
+    "zip"
+    "unzip"
     "wget"
     "python"
     "kitty"
@@ -15,9 +17,6 @@ official_packages=(
     "fcitx5"
     "fcitx5-configtool"
     "pipewire"
-    "pipewire-pulse"
-    "pipewire-alsa"
-    "pipewire-jack"
     "nerd-fonts"
     "firefox"
     "swww"
@@ -35,6 +34,8 @@ official_packages=(
     "hyprcursor"
     "hyprsunset"
     "hyprlock"
+    "wtype"
+    "vlc"
 )
 
 aur_packages=(
@@ -44,9 +45,7 @@ aur_packages=(
     "wlogout"
     "wl-gammarelay"
     "ttf-meslo-nerd-font-powerlevel10k"
-    "zen-browser-bin"
     "ttf-ms-fonts"
-    "vlc-git"
     "catppuccin-cursors-mocha"
     "catppuccin-gtk-theme-mocha"
 )
@@ -54,7 +53,25 @@ aur_packages=(
 # Update pacman
 sudo pacman -Syu
 
-# Install packages
-sudo pacman -S --needed "${official_packages[@]}"
+# Install yay
+if ! command -v yay &> /dev/null; then
+    sudo pacman -S --needed base-devel git || exit 1
+    git clone https://aur.archlinux.org/yay.git || exit 1
+    cd yay && makepkg -si || exit 1
+    cd .. && rm -rf yay
+fi
 
-yay -S --needed "${aur_packages[@]}"
+# Install packages
+for pkg in "${official_packages[@]}"; do
+    if ! sudo pacman -S --noconfirm --needed "$pkg"; then
+        echo "error pakage $pkg"
+    fi
+done
+
+for pkg in "${aur_packages[@]}"; do
+    if ! yay -S --noconfirm --needed "$pkg"; then
+        echo "error aur pakage $pkg"
+    fi
+done
+
+echo $'\n Done 😺'
