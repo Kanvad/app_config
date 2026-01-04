@@ -1,29 +1,51 @@
 ## My configuration for hyprland
 
 ### Preview
-waybar
-![image1](./asset/preview/img1.png)
-hyprpanel
-![image2](./asset/preview/img2.png)
 
-### Copy config
-```zsh
-chmod +x copy_config.sh && ./copy_config.sh
+| | |
+|:---:|:---:|
+| ![Preview 1](./asset/preview/pre1.png) | ![Preview 2](./asset/preview/pre2.png) |
+| ![Preview 3](./asset/preview/pre3.png) | ![Preview 4](./asset/preview/pre4.png) |
+
+### Packages
+- **Window Manager:** [Hyprland](https://hyprland.org/)
+- **Terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/)
+- **Shell:** [Zsh](https://www.zsh.org/)
+- **Status Bar:** [Waybar](https://github.com/Alexays/Waybar)
+- **File Manager:** [Dolphin](https://apps.kde.org/dolphin/) & [Yazi](https://github.com/sxyazi/yazi)
+- **App Launcher:** [Rofi (Wayland)](https://github.com/davatorium/rofi)
+- **Wallpaper:** [swww](https://github.com/L_S_D/swww)
+- **OSD:** [SwayOSD](https://github.com/ErikReider/SwayOSD)
+- **Idle & Lock:** [hypridle](https://github.com/hyprwm/hypridle) & [hyprlock](https://github.com/hyprwm/hyprlock)
+- **Input Method:** [Fcitx5](https://fcitx-im.org/wiki/Fcitx_5)
+- **Others:** `playerctl`, `hyprshot`, `firefox`
+
+### Installation
+Clone the repository and copy the configuration files:
+```bash
+# Copy config folders to ~/.config
+cp -r config/*/ ~/.config/
+
+# Copy .zshrc to home directory
+cp config/.zshrc ~/
 ```
 
-<!-- ### Dependencies -->
-<details>
-    <summary>Package</summary>
-    <ul>
-        <li><a href="https://github.com/hyprwm/Hyprland">hyprland</a></li>
-        <li><a href="https://github.com/catppuccin">catppuccin</a></li>
-        <li><a href="https://github.com/Alexays/Waybar">waybar</a></li>
-        <li><a href="https://github.com/A417ya/rofi-wayland">rofi-wayland</a></li>
-        <li><a href="https://github.com/hyprwm/hyprlock/">hyprlock</a></li>
-        <li><a href="https://github.com/Mange/rofi-emoji">rofi-emoji</a></li>
-        <li><a href="https://github.com/ryanoasis/nerd-fonts">nerd-fonts</a></li>
-        <li><a href="https://hyprpanel.com/">hyprpanel</a></li>
-        <li><a href="https://github.com/ArtsyMacaw/wlogout">wlogout</a></li>
-        <li>...</li>
-    </ul>
-</details>
+### Keybindings
+| Key | Action |
+| --- | --- |
+| `Super` + `Enter` | Open Terminal (Kitty) |
+| `Super` + `Q` | Close active window |
+| `Super` + `E` | Open File Manager |
+| `Super` + `V` | Toggle floating window |
+| `Super` + `A` | Open App Launcher (Rofi) |
+| `Super` + `B` | Open Browser (Firefox) |
+| `Super` + `X` | Open Power Menu |
+| `Super` + `Arrow` | Move focus |
+| `Super` + `1-0` | Switch workspace |
+| `Print` | Screenshot monitor |
+| `Super` + `Print` | Screenshot window |
+| `Shift` + `Print` | Screenshot region |
+
+### Credits
+- **Theme:** [Catppuccin Mocha](https://github.com/catppuccin/catppuccin)
+
